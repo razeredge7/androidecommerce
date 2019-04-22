@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1012645793373",
+    "firebase_url": "https://uas-ecommerce-c3a79.firebaseio.com",
+    "project_id": "uas-ecommerce-c3a79",
+    "storage_bucket": "uas-ecommerce-c3a79.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1012645793373:android:4e1dbc19cb44fbac",
+        "android_client_info": {
+          "package_name": "com.crew.foundation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1012645793373-svc1jm6hp9nkbssl2hfs2u4pmc0pe374.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAuIC5yIQHwg59sTinBUy0N6tgD6a4Ptms"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1012645793373-svc1jm6hp9nkbssl2hfs2u4pmc0pe374.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
