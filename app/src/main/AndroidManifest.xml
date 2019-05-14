@@ -4,6 +4,7 @@
     package="com.crew.foundation">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -12,16 +13,33 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
+        android:theme="@style/CustomActionBarTheme"
         tools:replace="android:appComponentFactory">
+        <activity android:name=".MainAdminPaymentLogActivity"></activity>
+        <activity android:name=".MainAdminActivity" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity android:name=".PaymentDetailActivity" />
+        <activity android:name=".PurchaseConfirmActivity" />
+        <activity android:name=".WishlistActivity" />
+        <activity android:name=".ViewProductActivity" />
+        <activity android:name=".TransactionDetailActivity" />
+        <activity android:name=".PaymentActivity" />
+        <activity android:name=".ShoppingCartActivity" />
         <activity
             android:name=".signupactivity"
-            android:theme="@style/login"></activity>
+            android:theme="@style/login" />
+        <activity
+            android:name=".LoginActivity"
+            android:theme="@style/login" />
         <activity android:name=".MainActivity" />
         <activity android:name=".EditInfoActivity" />
         <activity android:name=".DetailActivity" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".splashActivity"
             android:theme="@style/login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -29,6 +47,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <provider
+            android:name="com.facebook.FacebookContentProvider"
+            android:authorities="com.facebook.app.FacebookContentProvider585384205303736"
+            android:exported="true" />
     </application>
 
 </manifest>

@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!--<color name="colorPrimary">#F5F5F5</color>-->
+
     <color name="colorPrimary">#464646</color>
     <color name="colorPrimaryDark">#000000</color>
     <color name="colorAccent">#D81B60</color>
     <color name="colorSelected">#017A6C</color>
     <color name="colorNotSelected">#737474</color>
     <color name="colorBGPrimary">#F0F0F0</color>
+    <color name="actionbar_background">#D05757</color>
+    <color name="actionbar_text">#ffffff</color>
+
+
+
 </resources>

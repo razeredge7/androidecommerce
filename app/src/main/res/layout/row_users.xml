@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/row_user_username"
+        android:layout_width="135dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="top"
+        android:background="@drawable/rect_for_table_content"
+        android:fontFamily="@font/sf_pro_display_light"
+        android:text="Username"
+        android:textAlignment="center"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/row_user_regisdate"
+        android:layout_width="195dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="top"
+        android:background="@drawable/rect_for_table_content"
+        android:fontFamily="@font/sf_pro_display_light"
+        android:text="XX-XXX-XXXX at XX:XX"
+        android:textAlignment="center"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/row_user_fullname"
+        android:layout_width="150dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="top"
+        android:background="@drawable/rect_for_table_content"
+        android:fontFamily="@font/sf_pro_display_light"
+        android:text="Full Name"
+        android:textAlignment="center"
+        android:textSize="14sp" />
+
+
+
+    <TextView
+        android:id="@+id/row_user_email"
+        android:layout_width="170dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="top"
+        android:background="@drawable/rect_for_table_content"
+        android:fontFamily="@font/sf_pro_display_light"
+        android:text="Emailjsjsjsjs.@emailsss.com"
+        android:textAlignment="center"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/row_user_address"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:background="@drawable/rect_for_table_content"
+        android:fontFamily="@font/sf_pro_display_light"
+        android:text="address"
+        android:textSize="14sp" />
+
+</LinearLayout>
+

@@ -1,127 +1,181 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".HomeActivity">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textView"
+
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/personalInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sf_pro_display_bold"
+                android:lineSpacingExtra="12sp"
+                android:text="Personal Info"
+                android:textColor="#D84747"
+                android:textSize="30sp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"/>
+
+            <EditText
+                android:id="@+id/register_first_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/sf_pro_display_light"
+                android:hint="First Name"
+                android:singleLine="true"/>
+
+            <EditText
+                android:id="@+id/register_last_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/sf_pro_display_light"
+                android:hint="Last Name"
+                android:singleLine="true"/>
+
+            <EditText
+                android:id="@+id/register_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/sf_pro_display_light"
+                android:singleLine="true"
+                android:inputType="textEmailAddress"/>
+
+            <EditText
+                android:id="@+id/register_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="Address"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/sf_pro_display_light"
+
+                />
+
+            <EditText
+                android:id="@+id/register_place_of_birth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:hint="Place of Birth"
+                android:fontFamily="@font/sf_pro_display_light"
+                android:singleLine="true"/>
+
+            <Button
+                android:id="@+id/register_date_of_birth"
+                style="@android:style/Widget.DeviceDefault.Light.Spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sf_pro_display_light"
+                android:hint="Date of Birth"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:paddingBottom="15dp"
+                android:paddingTop="15dp"
+                android:paddingLeft="2dp"
+                android:singleLine="true"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="viewStart"
+                />
+
+            <TextView
+                android:id="@+id/loginInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sf_pro_display_bold"
+                android:lineSpacingExtra="12sp"
+                android:text="Login Info"
+                android:textColor="#D84747"
+                android:textSize="30sp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="16dp"/>
+
+            <EditText
+                android:id="@+id/register_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Username"
+                android:fontFamily="@font/sf_pro_display_light"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:singleLine="true"/>
+
+            <EditText
+                android:id="@+id/register_pass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sf_pro_display_light"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="0dp"
+                android:hint="Password"
+                android:singleLine="true"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/sf_pro_display_light"
+                android:text="Password should contain at least 1 numeric digit, uppercase and lowercase character"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/register_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sf_pro_display_bold"
+                android:layout_gravity="right"
+                android:text="Register"
+                android:background="@drawable/rounded_button"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="20dp"/>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+    <ProgressBar
+        android:id="@+id/register_loading"
+        style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:text="Personal Info"
-        android:textStyle="bold"
+        android:layout_marginBottom="8dp"
+        android:indeterminate="true"
+        android:minWidth="200dp"
+        android:minHeight="50dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.154"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:ems="10"
-        android:hint="First Name"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.263"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <EditText
-        android:id="@+id/editText2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:ems="10"
-        android:hint="Last Name"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.263"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
-
-    <EditText
-        android:id="@+id/editText4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:ems="10"
-        android:hint="Date Of Birth"
-        android:inputType="date"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.263"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="280dp"
-        android:layout_marginEnd="8dp"
-        android:text="Login Info"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.145"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/editText5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="8dp"
-        android:ems="10"
-        android:hint="Username"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.236"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
-    <EditText
-        android:id="@+id/editText6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="8dp"
-        android:ems="10"
-        android:hint="Password"
-        android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.236"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText5" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="56dp"
-        android:layout_marginEnd="8dp"
-        android:background="@drawable/rippleeffect"
-        android:text="R E G I S T E R"
-        android:textColor="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText6" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+

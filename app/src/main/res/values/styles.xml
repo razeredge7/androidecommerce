@@ -5,7 +5,6 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
     </style>
 
     <style name="login" parent="Theme.AppCompat.Light.NoActionBar">
@@ -14,6 +13,56 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+
+<!--buat style spinner datepicker-->
+    <style name="CustomDatePickerDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:dialogTheme">@style/MyDialogTheme</item>
+        <item name="android:datePickerStyle">@style/MyDatePicker</item>
+    </style>
+
+    <style name="MyDialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:datePickerStyle">@style/MyDatePicker</item>
+    </style>
+
+    <style name="MyDatePicker" parent="@android:style/Widget.Material.DatePicker">
+        <item name="android:datePickerMode">spinner</item>
+    </style>
+
+    <style name="CustomActionBarTheme"
+        parent="@style/Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:actionBarStyle">@style/MyActionBar</item>
+        <item name="android:actionBarTabTextStyle">@style/MyActionBarTabText</item>
+        <item name="android:actionMenuTextColor">@color/actionbar_text</item>
+
+        <!-- Support library compatibility -->
+        <item name="actionBarStyle">@style/MyActionBar</item>
+        <item name="actionBarTabTextStyle">@style/MyActionBarTabText</item>
+        <item name="actionMenuTextColor">@color/actionbar_text</item>
+    </style>
+
+    <!-- ActionBar styles -->
+    <style name="MyActionBar"
+        parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse" >
+        <item name="android:background">@color/actionbar_background</item>
+        <item name="android:titleTextStyle">@style/MyActionBarTitleText</item>
+
+        <!-- Support library compatibility -->
+        <item name="background">@color/actionbar_background</item>
+        <item name="titleTextStyle">@style/MyActionBarTitleText</item>
+    </style>
+
+    <!-- ActionBar title text -->
+    <style name="MyActionBarTitleText"
+        parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/actionbar_text</item>
+    </style>
+
+    <!-- ActionBar tabs text -->
+    <style name="MyActionBarTabText"
+        parent="@style/Widget.AppCompat.ActionBar.TabText">
+        <item name="android:textColor">@color/actionbar_text</item>
+    </style>
+
 
 
 </resources>
